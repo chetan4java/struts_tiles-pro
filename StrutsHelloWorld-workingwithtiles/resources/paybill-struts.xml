@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="paybillapp" namespace="/paybill" extends="struts-default">
+
+		<result-types>
+			<result-type name="tiles"
+				class="org.apache.struts2.views.tiles.TilesResult" />
+		</result-types>
+
+	<action name="*hmenuaction" method="{1}" class="com.paybill.actions.HmenuAction" >
+		<result name="homepage" type="tiles" >/paybill.welcome.tiles</result>
+		<result name="rulespage" type="tiles">rules</result>
+		<result name="searchpage" type="tiles">search</result>
+		<result name="enrollpage" type="tiles">enroll</result>
+		<result name="registrationpage" type="tiles">enroll</result>
+	</action>
+
+
+	</package>
+
+</struts>

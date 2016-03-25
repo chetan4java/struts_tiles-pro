@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+
+	<definition name="mib.baselayout1" template="/tiles/mib/layout.jsp" >
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="/mib/pages/Header.jsp" />
+		<put-attribute name="menu" value="/mib/pages/Menu.jsp" />
+		<put-attribute name="hmenu" value="/mib/pages/hmenu.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/mib/pages/Footer.jsp" />
+	</definition>
+	
+ 
+<definition name="/mib.welcome.tiles" extends="mib.baselayout1">
+	<put-attribute name="body"  value="/mib/pages/Login.jsp"/>
+</definition>
+
+	<definition name="/customer.success.tiles" extends="mib.baselayout1">
+		<put-attribute name="title" value="Customer Added" />
+		<put-attribute name="body" value="/mib/pages/SuccessCustomer.jsp" />
+	</definition>
+	
+	<definition name="rules" extends="mib.baselayout1">
+		<put-attribute name="title" value="rules Added" />
+		<put-attribute name="body" value="/mib/pages/rules.jsp" />
+	</definition>
+	
+	<definition name="search" extends="mib.baselayout1">
+		<put-attribute name="title" value="rules Added" />
+		<put-attribute name="body" value="/mib/pages/search.jsp" />
+	</definition>
+	
+	<definition name="enroll" extends="mib.baselayout1">
+		<put-attribute name="title" value="rules Added" />
+		<put-attribute name="body" value="/mib/pages/Customer.jsp" />
+	</definition>
+
+</tiles-definitions>

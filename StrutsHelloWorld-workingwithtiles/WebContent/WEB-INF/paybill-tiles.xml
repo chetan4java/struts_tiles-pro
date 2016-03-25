@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+	<definition name="paybill.baselayout1" template="/tiles/paybill/layout.jsp">
+		<put-attribute name="title" value="Paybill_demo_project" />
+		<put-attribute name="header" value="/paybill/Header.jsp" />
+		<put-attribute name="menu" value="/paybill/Menu.jsp" />
+		<put-attribute name="hmenu" value="/paybill/hmenu.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/paybill/Footer.jsp" />
+	</definition>
+
+	<definition name="/paybill.welcome.tiles" extends="paybill.baselayout1">
+		<put-attribute name="body" value="/paybill/pages/Login.jsp" />
+	</definition>
+
+</tiles-definitions>

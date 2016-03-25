@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+
+<package name="mib" extends="struts-default" namespace="/mib">
+		<result-types>
+			<result-type name="tiles"
+				class="org.apache.struts2.views.tiles.TilesResult" />
+		</result-types>
+		<action name="login" 
+			class="net.viralpatel.struts2.LoginAction">
+			<result name="success" type="tiles">/welcome.tiles</result>
+			<result name="error">Login.jsp</result>
+			</action>
+		
+		<action name="customer" 
+			class="net.viralpatel.struts2.CustomerAction">
+			<result name="success" type="tiles">/customer.success.tiles</result>
+			<result name="input" type="tiles">/customer.tiles</result>
+		</action>
+		<action name="login-form">
+			<result name="success" type="tiles">loginform</result>
+		</action>
+		
+		<action name="*hmenuaction" method="{1}" class="com.mib.actions.HmenuAction" >
+		<result name="homepage" type="tiles" >/mib.welcome.tiles</result>
+		<result name="rulespage" type="tiles">rules</result>
+		<result name="searchpage" type="tiles">search</result>
+		<result name="enrollpage" type="tiles">enroll</result>
+		<result name="registrationpage" type="tiles">enroll</result>
+	</action>
+	</package>
+</struts>
